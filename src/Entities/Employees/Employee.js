@@ -1,7 +1,7 @@
 module.exports.Employee = class Employee{
-    constructor(firstName, secondName){
+    constructor(firstName, lastName){
         this.firstName = firstName;
-        this.secondName = secondName;
+        this.lastName = lastName;
         if (this.constructor === Employee) {
             throw new Error('You cannot create an instance of Abstract Class.');
           }

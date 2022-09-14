@@ -1,5 +1,3 @@
-const Animal = require('../Animal');
+const { Animal } = require('../Animal');
 
-module.exports.Reptile = class Reptile extends Animal {
-
-};
+module.exports.Reptile = class Reptile extends Animal {};

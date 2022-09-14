@@ -1,3 +1,3 @@
-const Food = require('./Food');
+const { Food } = require('./Food');
 
-class Grass extends Food {}
+module.exports.Grass = class Grass extends Food {}
