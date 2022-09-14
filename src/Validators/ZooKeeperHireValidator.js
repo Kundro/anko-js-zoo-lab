@@ -25,7 +25,7 @@ module.exports.ZooKeeperHireValidator = class ZooKeeperHireValidator {
       });
     });
 
-    for(let i = allAnimalTypes.length-1; i>=0; i--){
+    for (let i = allAnimalTypes.length - 1; i >= 0; i--) {
       if (!allAnimals.includes(allAnimalTypes[i])) {
         let index = allAnimalTypes.indexOf(allAnimalTypes[i]);
         allAnimalTypes.splice(index, 1);

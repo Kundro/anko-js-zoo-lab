@@ -11,6 +11,8 @@ module.exports.HireValidatorProvider = class HireValidatorProvider {
     } else if (employee.constructor.name == 'Veterinarian') {
       return new VeterinarianHireValidator();
     } else
-      throw new Error(`For ${employee.constructor.name} class no available validators.`);
+      throw new Error(
+        `For ${employee.constructor.name} class no available validators.`,
+      );
   }
 };

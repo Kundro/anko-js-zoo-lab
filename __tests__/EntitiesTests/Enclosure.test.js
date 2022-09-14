@@ -17,6 +17,6 @@ describe('Should be able to create enclosure', () => {
     zoo.AddEnclosure(enclosure);
     const lion = new Lion();
     zoo.AddAnimal(lion);
-    expect(enclosure.animals.includes("Lion")).toBe(true);
+    expect(enclosure.animals.includes('Lion')).toBe(true);
   });
 });

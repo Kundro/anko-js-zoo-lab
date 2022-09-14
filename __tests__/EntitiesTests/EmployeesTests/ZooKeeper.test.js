@@ -69,7 +69,7 @@ describe('Should be able to create zookeeper', () => {
     zookeeper1.AddAnimalExperience(new Bison());
     zookeeper1.AddAnimalExperience(new Snake());
     zookeeper1.AddAnimalExperience(new Turtle());
-    
+
     zoo1.HireEmployee(zookeeper1);
     zoo1.FeedAnimals();
 

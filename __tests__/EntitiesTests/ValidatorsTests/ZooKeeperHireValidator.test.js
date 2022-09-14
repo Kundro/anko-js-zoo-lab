@@ -4,7 +4,9 @@ const {
 } = require('../../../src/Entities/Employees/Veterinarian');
 const { Enclosure } = require('../../../src/Entities/Enclosure');
 const { Zoo } = require('../../../src/Entities/Zoo');
-const { ZooKeeperHireValidator } = require('../../../src/Validators/ZooKeeperHireValidator');
+const {
+  ZooKeeperHireValidator,
+} = require('../../../src/Validators/ZooKeeperHireValidator');
 
 describe('Should be able to validate veterinarian', () => {
   test('Should be able to create hire veterinarian validator', () => {
@@ -21,6 +23,10 @@ describe('Should be able to validate veterinarian', () => {
 
     const validator = new ZooKeeperHireValidator();
     validator.ValidateEmployee(veterinarian1);
-    expect(validator.errors.includes(`Employee ${veterinarian1.firstName} ${veterinarian1.lastName} must be a zookeeper to take ZooKeeperHireValidator.`))
+    expect(
+      validator.errors.includes(
+        `Employee ${veterinarian1.firstName} ${veterinarian1.lastName} must be a zookeeper to take ZooKeeperHireValidator.`,
+      ),
+    );
   });
 });

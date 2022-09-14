@@ -3,7 +3,7 @@ module.exports.VeterinarianHireValidator = class VeterinarianHireValidator {
     this.errors = [];
   }
   ValidateEmployee(employee, zoo) {
-    if (!(employee.constructor.name == "Veterinarian")) {
+    if (!(employee.constructor.name == 'Veterinarian')) {
       this.errors.push(
         `Employee ${employee.firstName} ${employee.lastName} must be a veterinarian to take VeterinarianHireValidator.`,
       );
@@ -25,7 +25,7 @@ module.exports.VeterinarianHireValidator = class VeterinarianHireValidator {
       });
     });
 
-    for(let i = allAnimalTypes.length-1; i>=0; i--){
+    for (let i = allAnimalTypes.length - 1; i >= 0; i--) {
       if (!allAnimals.includes(allAnimalTypes[i])) {
         let index = allAnimalTypes.indexOf(allAnimalTypes[i]);
         allAnimalTypes.splice(index, 1);

@@ -5,7 +5,9 @@ const { ZooKeeper } = require('../../../src/Entities/Employees/ZooKeeper');
 const { FeedTime } = require('../../../src/Entities/FoodTypes/FeedTime');
 const { Meet } = require('../../../src/Entities/FoodTypes/Meet');
 const { Grass } = require('../../../src/Entities/FoodTypes/Grass');
-const { Antibiotics } = require('../../../src/Entities/MedicineTypes/Antibiotics');
+const {
+  Antibiotics,
+} = require('../../../src/Entities/MedicineTypes/Antibiotics');
 
 describe('Should be able to create Animal', () => {
   test('Should not be able to create Animal', () => {
@@ -55,7 +57,7 @@ describe('Should be able to create Animal', () => {
   });
   test('Should be able to create feed schedule', () => {
     let lion1 = new Lion();
-    let hours = [2,4,6];
+    let hours = [2, 4, 6];
     lion1.AddFeedSchedule(hours);
     expect(lion1.feedSchedule.includes(hours)).toBe(true);
   });
@@ -76,9 +78,7 @@ describe('Should be able to create Animal', () => {
     try {
       expect(lion1.Heal(antibiotics)).toThrow(Error);
     } catch (e) {
-      expect(e.message).toBe(
-        `${lion1.constructor.name} doesn't sick`,
-      );
+      expect(e.message).toBe(`${lion1.constructor.name} doesn't sick`);
     }
   });
 });
